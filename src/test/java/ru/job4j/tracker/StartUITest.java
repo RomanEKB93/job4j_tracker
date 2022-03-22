@@ -22,9 +22,8 @@ public class StartUITest {
         String[] answers = {"Deliver pizza", "Make coffee"};
         Input input = new StubInput(answers);
         Tracker tracker = new Tracker();
-        for (int i = 0; i < answers.length; i++) {
-            StartUI.createItem(input, tracker);
-        }
+        StartUI.createItem(input, tracker);
+        StartUI.createItem(input, tracker);
         Item created = tracker.findAll()[1];
         Item expected = new Item("Make coffee");
         assertThat(created.getName(), is(expected.getName()));
