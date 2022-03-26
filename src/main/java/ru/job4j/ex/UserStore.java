@@ -30,9 +30,9 @@ public class UserStore {
                 System.out.println("This user has an access");
             }
         } catch (UserInvalidException env) {
-            env.printStackTrace();
+            System.out.println("Exception is catched: " + env);
         } catch (UserNotFoundException enf) {
-            enf.printStackTrace();
+            System.out.println("Exception is catched: " + enf);
         }
     }
 }
