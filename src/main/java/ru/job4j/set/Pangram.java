@@ -5,12 +5,10 @@ import java.util.Set;
 
 public class Pangram {
     public static boolean checkString(String s) {
-      String[] letters = s.toLowerCase().split("");
+      String[] letters = s.toLowerCase().replace("\s", "").split("");
       Set<String> lettersSet = new HashSet<>();
       for (String x : letters) {
-          if (!x.equals(" ")) {
               lettersSet.add(x);
-          }
       }
       return lettersSet.size() == 26;
     }
