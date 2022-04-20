@@ -18,6 +18,14 @@ public class Card {
                            .flatMap(x -> Stream.of(Value.values())
                            .map(y -> new Card(x, y)))
                            .collect(Collectors.toList());
-        cards.forEach(x -> System.out.println(x.suit + " " + x.value));
+        cards.forEach(System.out::println);
+    }
+
+    @Override
+    public String toString() {
+        return "Card{"
+                + "suit=" + suit
+                + ", value=" + value
+                + '}';
     }
 }
